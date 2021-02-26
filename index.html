@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Panorama</title>
+    <link rel="stylesheet" href="css/pannellum.css" />
+    <script type="text/javascript" src="js/pannellum.js"></script>
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      body {
+        font-size: 18px;
+        line-height: 1.5em;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 40px auto;
+        padding: 0;
+        display: inline-block;
+        max-width: 1440px;
+        overflow-x: hidden;
+      }
+
+      #panorama {
+        width: 1200px;
+        height: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Simple panorama</h1>
+    <div id="panorama"></div>
+    <script>
+      pannellum.viewer("panorama", {
+        type: "equirectangular",
+        panorama:
+          "https://media.githubusercontent.com/media/starkhv70/panorama/master/img/pano1.jpg",
+        hfov: 100.0,
+        vaov: 128.0,
+        vOffset: 0.0,
+      });
+    </script>
+  </body>
+</html>
